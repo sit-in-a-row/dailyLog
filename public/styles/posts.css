@@ -1,0 +1,183 @@
+@import url(animations.css);
+
+.leftArea {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    height: 100vh;
+    padding: 0 2vw;
+    overflow: auto;
+    max-width: 13vw;
+    animation: leftToRight 0.5s ease-in-out forwards;
+    transition: 0.1s ease-in-out;
+    overflow: auto;
+}
+
+.searchBar {
+    padding: 1vh 1vw;
+    border: 2px solid gray;
+    border-radius: 3vh;
+    background-color: transparent;
+    margin-top: 13vh;
+}
+
+.menuList {
+    font-family: 'Pretendard';
+    color: white;
+    margin: 1.5vh 0;
+}
+
+.menuHeader, .tagHeader, .footerContainer {
+    font-size: 4vh;
+    margin: 2vh 0;
+    color: white;
+    cursor: pointer;
+}
+
+.menuHeader:hover, .tagHeader:hover {
+    color: yellowgreen;
+}
+
+.footerContainer {
+    display: flex;
+    gap: 0.5vw;
+    margin-top: 4vh;
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.menuItem {
+    font-size: 2.5vh;
+    font-weight: 100;
+    padding-left: 1vw;
+}
+
+.tagItems {
+    display: flex;
+    flex-wrap: wrap;
+    width: 13vw;
+    max-width: 13vw;
+    gap: 0.5vh;
+}
+
+.tagItem {
+    color: white;
+    font-weight: 100;
+    border: 1px solid white;
+    border-radius: 2vh;
+    width: max-content;
+    padding: 0.5vh 0.5vw;
+    margin: 0.2vh 0.2vw;
+}
+
+.menuItem:hover, .tagItem:hover {
+    cursor: pointer;
+    color: yellowgreen;
+}
+
+.rightArea {
+    position: absolute;
+    right: 0;
+    left: 17vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    animation: rightToLeft 0.5s ease-in-out forwards;
+    /* animation: fadeIn 0.5s ease-in-out forwards; */
+    transition: 0.5s ease-in-out;
+}
+.rightArea.no-animation {
+    animation: none;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.pageListTitle {
+    position: absolute;
+    color: white;
+    font-size: 5vh;
+    left: 3vw;
+    top: 6vh;
+    letter-spacing: -2px;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+.initPageContainer {
+    position: absolute;
+    top: 1vh;
+    width: 96%;
+    padding: 15vh 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+}
+.initPageBox {
+    border: 1px solid white;
+    border-radius: 2vh;
+    color: white;
+    padding: 2vh;
+    display: flex;
+    gap: 1vh;
+    justify-content: space-between;
+    width: 96%;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.initPageBox:hover {
+    border: 1px solid yellowgreen;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.initPageBox:hover .boxTitle {
+    transition: 0.2s ease-in-out;
+    color: yellowgreen;
+}
+.boxCategory {
+    width: 5vw;
+    margin-right: 2vw;
+}
+.boxCategory, .boxTitle {
+    transition: 0.2s ease-in-out;
+    font-size: 3vh;
+}
+.initPageBoxRow1 {
+    font-size: 2vh;
+    display: flex;
+    justify-content: space-between;
+}
+.initPageBoxRow2 {
+    display: flex;
+    gap: 10vw;
+    align-items: center;
+}
+.paginationContainer {
+    position: absolute;
+    bottom: 4vh;
+    left: 41.5vw;
+    transform: translateX(-50%);
+}
+.pageButton {
+    font-size: 2.5vh;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 0.5vh;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.pageButton:hover {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 0.5vh;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}

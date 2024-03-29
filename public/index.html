@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import the component -->
+    <script src="src/lib/typeIt.js"></script>
+    <script src="src/lib/prism.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <model-viewer 
+    class="model-viewer"
+    id="macbook"
+    src="./assets/model/model.gltf" 
+    disable-zoom
+    disable-tap
+    interpolation-decay="100" 
+    interaction-prompt="none"
+    ar ar-modes="webxr scene-viewer quick-look" 
+    camera-controls 
+    tone-mapping="commerce" 
+    shadow-intensity="1.5"
+    camera-orbit="-30deg 15deg -0.5m" 
+    field-of-view="30deg">
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+    </model-viewer>
+    <script>
+    </script>
+
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
