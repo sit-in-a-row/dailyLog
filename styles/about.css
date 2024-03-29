@@ -1,0 +1,108 @@
+* {
+    word-break: keep-all;
+}
+
+#about-blackOut {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.1);
+}
+#gridContainer {
+    position: absolute;
+    top: 13vh;
+    left: 7%;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2vh;
+	width: 82vw;
+	height: 78vh;
+    padding: 4vh 2vw;
+    transform-style: preserve-3d; 
+}
+.gridElement {
+    position: relative; /* 오버레이를 위해 relative 위치 설정 */
+
+    border-radius: 2vh;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-shadow : 0px 5px 15px 1px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: height 0.5s ease;
+}
+.gridElement:hover .overlay {
+    height: 100%; /* 호버 시 오버레이 높이 조정 */
+}
+.overlayText {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 90%;
+    font-size: 2vh;
+}
+.gridText {
+    line-height: 3.5vh;
+}
+.gridHighlight {
+    font-size: 2.2vh;
+    font-weight: bold;
+}
+
+#gridElement1 {
+	grid-area: 1/1/2/2;
+	/* background-color: rgba(100, 100, 100, 0.5); */
+    background-color: rgba(18,18,18,0.5);
+}
+#gridElement2 {
+	grid-area: 1 / 2 / 2 / 4;
+	background-color: rgba(100, 100, 100, 0.5);
+}
+#gridElement3 {
+	grid-area: 1 / 4 / 3 / 5;
+	background-color: rgba(100, 100, 100, 0.5);
+}
+#gridElement4 {
+	grid-area: 2 / 1 / 3 / 3;
+	background-color: rgba(100, 100, 100, 0.5);
+}
+#gridElement5 {
+	grid-area: 2/3/3/4;
+	background-color: rgba(100, 100, 100, 0.5);
+}
+.gridImg {
+    /* filter: grayscale(1); */
+    width: 100%;
+    flex-shrink: 0;
+}
+#gridImg1, #gridImg2, #gridImg5 {
+    width: 100%; /* 이미지의 너비를 그리드 요소의 너비에 맞춤 */
+    height: auto; /* 높이를 자동으로 조정하여 비율 유지 */
+    object-fit: cover; /* 이미지 비율을 유지하면서 요소를 완전히 채우도록 설정 */
+}
+#gridImg3 {
+    height: 100%;
+}
+#gridImg4 {
+    transform: translateY(-25%);
+}
