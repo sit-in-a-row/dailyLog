@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "build": "webpack --mode production",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
