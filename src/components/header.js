@@ -1,4 +1,4 @@
-import { navBarElementList } from "../app.js";
+import { navBarElementList } from "../index.js";
 import { checkDuplication, createElement } from "../utils/createElement.js";
 import { router } from "../router.js";
 
