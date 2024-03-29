@@ -1,11 +1,10 @@
 {
-    "routes": [
-      { "handle": "filesystem" },
-      {
-        "src": "/.*",
-        "dest": "/index.html",
-        "continue": false
-      }
-    ]
-  }
-  
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/api/render", "dest": "/api/render.js" },
+    {
+      "src": "/.*",
+      "dest": "/api/render"
+    }
+  ]
+}
